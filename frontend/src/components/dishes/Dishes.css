@@ -1,0 +1,13 @@
+.dish-title-item {
+  padding: 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  width: 100%;
+  margin: 50px 0;
+  text-align: center;
+  font-size: 35px;
+}

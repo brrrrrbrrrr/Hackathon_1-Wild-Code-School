@@ -1,0 +1,26 @@
+.dish {
+  width: 250px;
+  height: 300px;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: antiquewhite;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.dish__title {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.dish__image {
+  width: 248px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+}

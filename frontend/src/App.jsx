@@ -1,9 +1,10 @@
 import "./App.css";
+import Dishes from "./components/dishes/Dishes";
 
 function App() {
   return (
     <div className="App">
-      <p>coucou</p>
+      <Dishes />
     </div>
   );
 }
