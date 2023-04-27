@@ -1,26 +1,32 @@
 .dish {
-  width: 250px;
+  width: 240px;
   height: 300px;
+  min-height: 300px;
   margin-bottom: 50px;
   margin-right: 50px;
-  padding-top: 10px;
+  background-color: antiquewhite;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  background-color: antiquewhite;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
+  justify-content: space-between;
+  padding-top: 20px;
 }
 
 .dish__title {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
-  margin-bottom: 15px;
   text-align: center;
+  padding: 0 15px;
+  max-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .dish__image {
-  width: 248px;
-  height: 250px;
+  width: 238px;
+  height: 240px;
+  max-height: 240px;
   object-fit: cover;
-  border-radius: 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
