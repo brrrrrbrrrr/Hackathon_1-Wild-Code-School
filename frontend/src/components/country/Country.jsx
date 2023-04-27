@@ -1,22 +1,23 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable react/prop-types */
 /* eslint-disable import/no-extraneous-dependencies */
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import Dishes from "../dishList/Dishes";
+import { Link, useNavigate } from "react-router-dom";
 import { useLanguageData } from "../../contexts/LanguageContext";
 
 function Country({ country }) {
+  const navigate = useNavigate();
   const { setLanguageData } = useLanguageData();
-  const [language, setLanguage] = useState();
+
   if (country !== undefined && country !== null) {
     useEffect(() => {
       axios
         .get(`https://restcountries.com/v3.1/alpha/${country}`)
         .then((res) => {
           // setLanguage(Object.values(res.data[0].languages)[0]);
-          setLanguage(res.data[0].demonyms.eng.m);
-          setLanguageData(language);
+          setLanguageData(res.data[0].demonyms.eng.m);
+          navigate("/dishes");
         })
         .catch((error) => {
           console.warn(error);
@@ -24,15 +25,9 @@ function Country({ country }) {
     }, [country]);
   }
 
-  console.warn("country : ", language);
   return (
     <div>
-      <p>{country}</p>
-      {language ? (
-        <Dishes language={language} />
-      ) : (
-        <Link to="/randomDish"> Découvrir un pays au hasard ? </Link>
-      )}
+      <Link to="/randomDish"> Découvrir un pays au hasard ? </Link>
     </div>
   );
 }
