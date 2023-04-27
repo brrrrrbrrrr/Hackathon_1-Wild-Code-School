@@ -1,11 +1,14 @@
 import React, { useRef, useState, useEffect } from "react";
 import * as THREE from "three";
-import "./Home.css";
 
-function Home() {
+function Test() {
   const canvasRef = useRef(null);
   const [speed, setSpeed] = useState(0.09);
   const [activated, setActivated] = useState(false);
+
+  const handleClick = () => {
+    setActivated((prev) => !prev);
+  };
 
   useEffect(() => {
     let camera;
@@ -13,22 +16,8 @@ function Home() {
     let renderer;
     const stars = [];
     let planeMesh;
-    // eslint-disable-next-line no-restricted-globals
-    const mouse = { x: innerWidth / 2, y: innerHeight / 2 };
+
     const colors = ["#0952BD", "#A5BFF0", "#118CD6", "#1AAEE8", "#ffffff"];
-
-    const handleMouseDown = () => {
-      setActivated(true);
-    };
-
-    const handleMouseUp = () => {
-      setActivated(false);
-    };
-
-    function handleMouseMove(event) {
-      mouse.x = event.clientX;
-      mouse.y = event.clientY;
-    }
 
     function handleWindowResize() {
       camera.aspect = window.innerWidth / window.innerHeight;
@@ -105,9 +94,6 @@ function Home() {
       planeMesh = new THREE.Mesh(planeGeometry, planeMaterial);
       scene.add(planeMesh);
 
-      window.addEventListener("mousedown", handleMouseDown);
-      window.addEventListener("mouseup", handleMouseUp);
-      window.addEventListener("mousemove", handleMouseMove);
       window.addEventListener("resize", handleWindowResize);
       animate();
     }
@@ -116,20 +102,21 @@ function Home() {
 
     // cleanup
     return () => {
-      window.removeEventListener("mousedown", handleMouseDown);
-      window.removeEventListener("mouseup", handleMouseUp);
-      window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("resize", handleWindowResize);
     };
-  }, []);
+  }, [speed]);
+
   return (
-    <div className="wrapper-text">
-      <h2 className="text apparition">Click and Hold</h2>
-      <h2 className="title apparition">
-        Ready to go to <span>LightSpeed</span> ?
-      </h2>
+    <div>
+      <input
+        type="submit"
+        value="Let's go"
+        className="btn"
+        onClick={handleClick}
+      />
+      <canvas ref={canvasRef} style={{ width: "100%", height: "100%" }} />
     </div>
   );
 }
 
-export default Home;
+export default Test;

@@ -1,9 +1,10 @@
+import ParticleBackground from "./pages/ParticleBackground";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <p>coucou</p>
+      <ParticleBackground />
     </div>
   );
 }
