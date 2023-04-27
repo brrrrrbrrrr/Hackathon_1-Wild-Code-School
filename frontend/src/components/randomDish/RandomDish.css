@@ -1,0 +1,80 @@
+.span-bold {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.button-random {
+  width: 100px;
+  cursor: pointer;
+  border-radius: 15px;
+  border: yellow 2px solid;
+  background-color: rgb(73, 200, 226);
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+}
+.button-random:hover {
+  background-color: blueviolet;
+  transform: scale(1.05);
+  transition: all 350ms ease-in;
+}
+.buttons-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.buttons-title {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.random-dish {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.random-dish__title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 15px;
+  max-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.random-dish__image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.random-dish__area {
+  margin: 20px 0;
+}
+.random-dish__instructions {
+  width: 500px;
+  font-size: 17px;
+}
+
+.random-item-half2 {
+  padding: 20px 30px;
+  background-color: rgb(183, 245, 243);
+}
+.random-insult {
+  width: 100%;
+  margin: 50px 0;
+}
+.random-insult-p {
+  font-size: 25px;
+  text-align: center;
+}

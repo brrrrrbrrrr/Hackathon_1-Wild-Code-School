@@ -41,7 +41,7 @@ const getStyle = ({
   cursor: "pointer",
 });
 
-export default function App() {
+function Map() {
   const [state, setState] = useState({
     cName: "Select Country",
     iso: "",
@@ -71,3 +71,5 @@ export default function App() {
     </>
   );
 }
+
+export default Map;
