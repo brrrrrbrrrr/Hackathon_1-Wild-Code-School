@@ -2,10 +2,11 @@
 /* eslint-disable import/no-named-as-default */
 import Cockpit from "../components/Cockpit";
 
-export default function Home() {
+function Home() {
   return (
     <div>
       <Cockpit />
     </div>
   );
 }
+export default Home;
