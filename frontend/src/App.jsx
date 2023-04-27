@@ -1,12 +1,12 @@
 import RandomDish from "./components/randomDish/RandomDish";
 import "./App.css";
-import Dishes from "./components/dishList/Dishes";
+import Map from "./components/map/Map";
 
 function App() {
   return (
     <div className="App">
-      <Dishes />
       <RandomDish />
+      <Map />
     </div>
   );
 }
