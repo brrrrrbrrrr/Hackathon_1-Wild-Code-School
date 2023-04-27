@@ -1,0 +1,19 @@
+.cockpit-container {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.cockpit-picture {
+  z-index: 0;
+  margin: auto;
+  width: 100%;
+}
+
+.phone-video {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+}
