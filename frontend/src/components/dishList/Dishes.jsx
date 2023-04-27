@@ -17,7 +17,7 @@ function Dishes({ language }) {
 
   return (
     <div className="dish-title-item">
-      <h1>Voici la liste des plats les plus populaires de ce {language}</h1>
+      <h1>Voici la liste des plats les plus populaires de {language}</h1>
 
       {countryDishes &&
         countryDishes.map((dish) => (
