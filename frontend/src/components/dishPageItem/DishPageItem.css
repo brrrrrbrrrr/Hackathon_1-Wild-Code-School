@@ -17,6 +17,8 @@
 }
 .dish-page-instructions {
   margin-bottom: 55px;
+  line-height: 1.9;
+  letter-spacing: 5px;
 }
 .dish-page-image {
   width: 350px;
