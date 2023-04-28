@@ -27,7 +27,10 @@ function Country({ country }) {
 
   return (
     <div>
-      <Link to="/randomDish"> Découvrir un pays au hasard ? </Link>
+      <Link to="/randomDish" style={{ color: "#FFF" }}>
+        {" "}
+        Random country
+      </Link>
     </div>
   );
 }

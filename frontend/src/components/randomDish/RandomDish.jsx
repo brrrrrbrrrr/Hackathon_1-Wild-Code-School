@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./RandomDish.css";
+import Test from "../../pages/Test";
 
 function RandomDish() {
   const [randomDish, setRandomDish] = useState([]);
@@ -34,11 +35,11 @@ function RandomDish() {
   }, [button]);
 
   return (
-    <div>
+    <div className="randomDish-global-container">
       <div className="buttons-title-container">
         <h2 className="buttons-title">
-          Faire <span className="span-bold"> voyager </span> vos papilles au
-          hasard ?
+          Offer a random <span className="span-bold"> trip </span> to your taste
+          buds ?
         </h2>
         <div className="buttons-container">
           <button
@@ -46,14 +47,14 @@ function RandomDish() {
             className="button-random"
             onClick={getRandomDish}
           >
-            Oui
+            Yes
           </button>
           <button
             type="button"
             className="button-random"
             onClick={getRandomInsult}
           >
-            Non
+            No
           </button>
         </div>
       </div>
@@ -74,7 +75,7 @@ function RandomDish() {
             <div className="random-item-half random-item-half2">
               <p className="random-dish__area">Origin: {randomDish.strArea}</p>
               <p className="random-dish__instructions">
-                Recettes: <br />
+                Recipe : <br />
                 <br />
                 {randomDish.strInstructions}
               </p>
@@ -84,6 +85,7 @@ function RandomDish() {
           ""
         )}
       </div>
+      <Test />
     </div>
   );
 }

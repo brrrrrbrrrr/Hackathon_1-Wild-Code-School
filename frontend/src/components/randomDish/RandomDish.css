@@ -1,7 +1,16 @@
+.randomDish-global-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+}
+
 .span-bold {
   text-decoration: underline;
   font-weight: bold;
 }
+
 .button-random {
   width: 100px;
   cursor: pointer;
@@ -13,36 +22,44 @@
   font-weight: bold;
   padding: 5px;
 }
+
 .button-random:hover {
   background-color: blueviolet;
   transform: scale(1.05);
   transition: all 350ms ease-in;
 }
+
 .buttons-title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .buttons-title {
   text-align: center;
   font-size: 25px;
   padding-top: 20px;
   margin-bottom: 20px;
+  font-family: sans-serif;
 }
+
 .buttons-container {
   display: flex;
   justify-content: space-between;
   width: 300px;
 }
 
+
+
 .random-dish {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  margin-top: 30px;
+  align-items: center;
 }
+
 .random-dish__title {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   text-align: center;
   padding: 0 15px;
@@ -52,28 +69,45 @@
   justify-content: center;
   margin: 20px 0;
 }
+
 .random-dish__image {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 10px;
 }
+
 .random-dish__area {
   margin: 20px 0;
+  font-size: 25px;
+  text-align: center;
+  font-family: sans-serif;
+  text-decoration: underline;
 }
+
 .random-dish__instructions {
   width: 500px;
   font-size: 17px;
+  text-align: justify;
+  line-height: 3vh;
+}
+
+.random-dish-title-image-container {
+  align-self: flex-start;
 }
 
 .random-item-half2 {
   padding: 20px 30px;
-  background-color: rgb(183, 245, 243);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 .random-insult {
   width: 100%;
-  margin: 50px 0;
+  margin: 20px 0;
 }
+
 .random-insult-p {
   font-size: 25px;
   text-align: center;
