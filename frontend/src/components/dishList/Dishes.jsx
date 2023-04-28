@@ -3,11 +3,13 @@
 import React, { useEffect, useState } from "react";
 import "./Dishes.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import DishItem from "../dishes/DishItem";
 import { useLanguageData } from "../../contexts/LanguageContext";
 
 function Dishes({ language }) {
   const [countryDishes, setCountryDishes] = useState([]);
+  // const [id, setId] = useState("");
   const { languageData } = useLanguageData();
   useEffect(() => {
     axios
@@ -26,11 +28,13 @@ function Dishes({ language }) {
 
       {countryDishes &&
         countryDishes.map((dish) => (
-          <DishItem
-            key={dish.idMeal}
-            title={dish.strMeal}
-            image={dish.strMealThumb}
-          />
+          <Link to={`/dish/${dish.idMeal}`}>
+            <DishItem
+              key={dish.idMeal}
+              title={dish.strMeal}
+              image={dish.strMealThumb}
+            />
+          </Link>
         ))}
     </div>
   );
