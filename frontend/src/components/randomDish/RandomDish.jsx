@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./RandomDish.css";
+import Test from "../../pages/Test";
 
 function RandomDish() {
-  const [randomDish, setRandomDish] = useState([]);
+  const [randomDish, setRandomDish] = useState(null);
   const [randomInsult, setRandomInsult] = useState("");
   const [button, setButton] = useState(false);
 
@@ -19,10 +20,12 @@ function RandomDish() {
 
   const getRandomInsult = () => {
     setButton(!button);
-    setRandomDish("");
+    setRandomDish(null);
   };
 
   useEffect(() => {
+    if (!button) return;
+
     const corsProxy = "https://api.allorigins.win/raw?url=";
     const apiUrl =
       "https://evilinsult.com/generate_insult.php?lang=en&type=text";
@@ -30,15 +33,14 @@ function RandomDish() {
       .get(corsProxy + apiUrl)
       .then((response) => setRandomInsult(response.data))
       .catch((err) => console.error(err));
-    console.warn(randomInsult);
   }, [button]);
 
   return (
-    <div>
+    <div className="randomDish-global-container">
       <div className="buttons-title-container">
         <h2 className="buttons-title">
-          Faire <span className="span-bold"> voyager </span> vos papilles au
-          hasard ?
+          Offer a random <span className="span-bold"> trip </span> to your taste
+          buds ?
         </h2>
         <div className="buttons-container">
           <button
@@ -46,44 +48,48 @@ function RandomDish() {
             className="button-random"
             onClick={getRandomDish}
           >
-            Oui
+            Yes
           </button>
           <button
             type="button"
             className="button-random"
-            onClick={getRandomInsult}
+            onClick={() => {
+              getRandomInsult();
+              setRandomInsult("");
+            }}
           >
-            Non
+            No
           </button>
         </div>
       </div>
       <div className="random-insult">
-        {randomInsult ? <p className="random-insult-p">{randomInsult}</p> : ""}
+        {randomInsult && <p className="random-insult-p">{randomInsult}</p>}
       </div>
       <div className="random-item">
-        {randomDish ? (
+        {randomDish && (
           <div className="random-dish">
             <div className="random-item-half random-dish-title-image-container">
               <h2 className="random-dish__title">{randomDish.strMeal}</h2>
-              <img
-                src={randomDish.strMealThumb}
-                alt={randomDish.strMeal}
-                className="random-dish__image"
-              />
+              {randomDish.strMealThumb && (
+                <img
+                  src={randomDish.strMealThumb}
+                  alt={randomDish.strMeal}
+                  className="random-dish__image"
+                />
+              )}
             </div>
             <div className="random-item-half random-item-half2">
               <p className="random-dish__area">Origin: {randomDish.strArea}</p>
               <p className="random-dish__instructions">
-                Recettes: <br />
+                Recipe : <br />
                 <br />
                 {randomDish.strInstructions}
               </p>
             </div>
           </div>
-        ) : (
-          ""
         )}
       </div>
+      <Test />
     </div>
   );
 }

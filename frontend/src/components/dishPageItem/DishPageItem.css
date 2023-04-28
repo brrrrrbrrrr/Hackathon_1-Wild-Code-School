@@ -4,6 +4,7 @@
   height: 100vh;
   margin: auto 0px;
 }
+
 .dish-page-span {
   text-decoration: underline;
 }
@@ -11,28 +12,33 @@
 .dish-page-location {
   margin-bottom: 15px;
 }
+
 .dish-page-title {
   font-weight: bold;
   font-size: 35px;
   text-align: center;
   margin: 30px 0;
 }
+
 .dish-page-instructions {
   margin-bottom: 55px;
   line-height: 1.9;
   letter-spacing: 5px;
 }
+
 .dish-page-image {
   width: 350px;
   height: 350px;
   border-radius: 5%;
   border: 1px solid white;
 }
+
 .dish-page-media-container {
   display: flex;
   justify-content: space-around;
   padding: 20px 100px;
 }
+
 .dish-page-video {
   border-radius: 10px;
   border: 1px solid white;

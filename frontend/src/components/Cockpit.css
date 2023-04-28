@@ -90,7 +90,6 @@
   cursor: pointer;
   position: fixed;
   background-color: rgba(125, 182, 232);
-
   padding: 20px;
   z-index: 20;
   right: 27%;
@@ -136,6 +135,26 @@
   animation: all 750ms ease;
 
   display: none;
+}
+
+.country {
+  z-index: 50;
+  cursor: pointer;
+  position: fixed;
+  background-color: rgba(125, 182, 232);
+  padding: 20px;
+  right: 43%;
+  top: 85%;
+  border-radius: 5px;
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+  transition: all 250ms ease;
+  font-size: 1vw;
+  font-family: "Orbitron-Regular";
+}
+
+.country:hover {
+  box-shadow: 0 0 20px rgb(125, 182, 232);
 }
 
 @keyframes fade {

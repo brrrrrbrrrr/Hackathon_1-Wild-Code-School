@@ -9,6 +9,7 @@ import PhoneVideoLoop from "../assets/img/holo_phone_loop.webm";
 import HoloMap from "../assets/img/holo_map.webm";
 import Map from "./map/Map";
 import "./Cockpit.css";
+import Country from "./country/Country";
 
 function Cockpit() {
   const phoneRef = useRef();
@@ -120,7 +121,7 @@ function Cockpit() {
             onInit={(typewriter) => {
               typewriter
                 .typeString(
-                  "Vous êtes un influenceur venu de la Planète QUINOA - AINOU 97X Votre mission si vous l’acceptez sera de découvrir les différents pays de la Planète Terre pour offrir une expérience authentique et immersive à vos abonnés"
+                  "You are an influencer from Planet QUINOA - AINOU 97X Your mission if you accept it will be to discover the different countries of Planet Earth to offer an authentic and immersive experience to your subscribers"
                 )
                 .pauseFor(2500)
                 .start();
@@ -130,6 +131,9 @@ function Cockpit() {
       </div>
       {map ? <Map /> : ""}
       {toggleMapButton ? <Map /> : ""}
+      <button type="button" className="country">
+        <Country />
+      </button>
     </div>
   );
 }
