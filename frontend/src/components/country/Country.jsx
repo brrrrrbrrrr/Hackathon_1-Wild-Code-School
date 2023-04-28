@@ -17,7 +17,7 @@ function Country({ country }) {
         .then((res) => {
           // setLanguage(Object.values(res.data[0].languages)[0]);
           setLanguageData(res.data[0].demonyms.eng.m);
-          navigate("/dishes");
+          navigate("/country");
         })
         .catch((error) => {
           console.warn(error);

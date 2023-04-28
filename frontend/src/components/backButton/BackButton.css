@@ -1,0 +1,18 @@
+.back-button {
+  background-color: blue;
+  color: aliceblue;
+  font-size: 18px;
+  width: 120px;
+  padding: 8px;
+  border-radius: 10px;
+  transition: all 400ms ease-in;
+  position: sticky;
+  top: 10px;
+  left: 90%;
+  cursor: pointer;
+}
+.back-button:hover {
+  color: green;
+  background-color: yellow;
+  font-weight: bold;
+}
