@@ -6,6 +6,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import DishItem from "../dishes/DishItem";
 import { useLanguageData } from "../../contexts/LanguageContext";
+import Test from "../../pages/Test";
 
 function Dishes({ language }) {
   const [countryDishes, setCountryDishes] = useState([]);
@@ -24,6 +25,7 @@ function Dishes({ language }) {
 
   return (
     <div className="dish-title-item">
+      <Test />
       <h1>Voici la liste des plats les plus populaires de {language}</h1>
 
       {countryDishes &&

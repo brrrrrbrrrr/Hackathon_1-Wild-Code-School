@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import "./DishPageItem.css";
+import Test from "../../pages/Test";
 
 function DishPageItem({ content }) {
   const getYoutubeEmbedUrl = (url) => {
@@ -19,6 +20,7 @@ function DishPageItem({ content }) {
 
   return (
     <div className="dish-page-container">
+      <Test />
       <h2 className="dish-page-title">{content.strMeal}</h2>
       <p className="dish-page-location">
         <span className="dish-page-span"> Type </span> :{content.strArea}
