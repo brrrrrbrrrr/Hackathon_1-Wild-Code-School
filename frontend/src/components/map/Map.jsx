@@ -4,6 +4,7 @@ import { useState } from "react";
 import WorldMap from "react-svg-worldmap";
 import Country from "../country/Country";
 import Data from "./Data";
+import "./Map.css";
 
 function formattedNumber(num, digits) {
   if (typeof num === "undefined") return "";
@@ -62,10 +63,13 @@ function Map() {
   return (
     <>
       <WorldMap
+        className="worldMap"
         title=""
         data={Data}
         onClickFunction={clickAction}
         styleFunction={getStyle}
+        backgroundColor="transparent"
+        color="blue"
       />
       <Country country={state.iso} />
     </>

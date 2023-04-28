@@ -16,3 +16,27 @@ path {
   /* fill: #2a354d; */
   fill: red;
 }
+
+/* .worldMap{
+  position:absolute;
+  top:0;
+  right:35%;
+} */
+
+.worldmap__figure-container {
+  position: absolute;
+  top: 30%;
+  right: 36%;
+  z-index: 30;
+  transition: transform 0.1s;
+}
+
+.worldmap__figure-container:hover {
+  -ms-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+svg {
+  width: 100%;
+}
