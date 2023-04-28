@@ -10,11 +10,13 @@ import Dishes from "./components/dishList/Dishes";
 import RandomDish from "./components/randomDish/RandomDish";
 import Map from "./components/map/Map";
 import LanguageProvider from "./contexts/LanguageContext";
+import BackButton from "./components/backButton/BackButton";
 
 function App() {
   return (
     <div className="App">
       <LanguageProvider>
+        <BackButton />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/map" element={<Map />} />
