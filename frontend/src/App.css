@@ -7,17 +7,21 @@
   border: 0;
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
 }
+
 ul,
 ol,
 li {
   list-style: none;
 }
+
 img {
   vertical-align: top;
 }
+
 h1,
 h2,
 h3,
@@ -27,6 +31,7 @@ h6 {
   font-weight: inherit;
   font-size: inherit;
 }
+
 html,
 body {
   margin: 0;
@@ -35,21 +40,23 @@ body {
   font-family: Poppins;
 
 }
+
 .wrapper {
   min-height: 100%;
   display: flex;
   flex-direction: column;
 }
+
 main {
   flex: 1 1 auto;
 }
 
 .App {
- position: absolute;
- /* top: 50%;
+  position: absolute;
+  /*  top: 50%;
 left: 50%;
 transform: translate(-50%,-50%); */
 
 
-}
 
+}

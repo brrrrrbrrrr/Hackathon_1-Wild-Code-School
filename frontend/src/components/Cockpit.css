@@ -14,11 +14,13 @@
   z-index: 3;
   margin: auto;
   width: 100%;
-  position: absolute;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
 }
 
 .phone-video {
-  position: absolute;
+  position: fixed;
   z-index: 4;
   width: 100%;
   top: 0;
@@ -26,7 +28,7 @@
 }
 
 .holo-map {
-  position: absolute;
+  position: fixed;
   z-index: 4;
   width: 80%;
   top: 20%;
@@ -34,14 +36,14 @@
 }
 
 .disable-holo-map {
-  position: absolute;
+  position: fixed;
   opacity: transparent;
   width: 100%;
   top: 0;
 }
 
 .phone-video-loop {
-  position: absolute;
+  position: fixed;
   z-index: 5;
   width: 100%;
   top: 0;
@@ -49,7 +51,7 @@
 }
 
 .disable-video-loop {
-  position: absolute;
+  position: fixed;
   opacity: transparent;
   width: 100%;
   top: 0;
@@ -57,7 +59,7 @@
 }
 
 .disable-video {
-  position: absolute;
+  position: fixed;
   opacity: transparent;
   width: 100%;
   top: 0;
@@ -68,7 +70,7 @@
 
 .cockpit-container .start-mission {
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   background-color: rgba(125, 182, 232, 0.5);
   box-shadow: 0 0 20px rgb(125, 182, 232);
   padding: 20px;
@@ -81,28 +83,29 @@
   text-shadow: 0 0 5px #fff;
   transition: all 250ms ease;
   font-size: 1vw;
+  font-family: "Orbitron-Regular";
 }
 
 .cockpit-container .map-button {
   cursor: pointer;
-  position: absolute;
-  background-color: rgba(125, 182, 232, 0.5);
-  box-shadow: 0 0 20px rgb(125, 182, 232);
+  position: fixed;
+  background-color: rgba(125, 182, 232);
+
   padding: 20px;
   z-index: 20;
   right: 27%;
   top: 62%;
-  mix-blend-mode: hard-light;
   border-radius: 5px;
   color: #fff;
   text-shadow: 0 0 5px #fff;
   transition: all 250ms ease;
   font-size: 1vw;
+  font-family: "Orbitron-Regular";
 }
 
 .cockpit-container .map-button:hover {
 
-  background-color: rgba(125, 182, 232, 1);
+  box-shadow: 0 0 20px rgb(125, 182, 232);
 }
 
 .cockpit-container .start-mission:hover {
@@ -112,7 +115,7 @@
 .timer {
   z-index: 40;
   width: 14%;
-  position: absolute;
+  position: fixed;
   line-height: 4vh;
   top: 18%;
   left: 44%;
