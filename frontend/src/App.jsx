@@ -1,15 +1,20 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-unresolved */
+
 import "./App.css";
 import Dish from "./pages/Dish";
+import Dishes from "./components/dishList/Dishes";
 import RandomDish from "./components/randomDish/RandomDish";
 import Map from "./components/map/Map";
-import Home from "./pages/Home";
 import LanguageProvider from "./contexts/LanguageContext";
 
 function App() {
   return (
-    <LanguageProvider>
-      <div className="App">
+    <div className="App">
+      <LanguageProvider>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/map" element={<Map />} />
@@ -17,11 +22,10 @@ function App() {
           <Route path="/dish/:id" element={<Dish />} />
           {/* <Route path="/" element={} />
         <Route path="/" element={} /> */}
+          <Route path="/dishes" element={<Dishes />} />
         </Routes>
-        {/* <RandomDish />
-      <Map /> */}
-      </div>
-    </LanguageProvider>
+      </LanguageProvider>
+    </div>
   );
 }
 

@@ -1,0 +1,21 @@
+.btn {
+
+  background-color: rgba(125, 182, 232);
+
+  position: absolute;
+  left: 35.6%;
+  top: 66%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 20;
+  cursor: pointer;
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+  transition: all 250ms ease;
+  font-size: 1.2vw;
+}
+
+.btn:hover {
+  box-shadow: 0 0 10px rgb(125, 182, 232);
+}
