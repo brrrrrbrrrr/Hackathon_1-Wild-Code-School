@@ -1,6 +1,21 @@
+@font-face {
+  font-family: "Orbitron-Regular";
+  src: url("../assets/fonts/orbitron/Orbitron-Regular.ttf");
+}
+
 .back-button {
-  background-color: blue;
-  color: aliceblue;
+  background: linear-gradient(
+    90deg,
+    #787878 0%,
+    #b5b5b5 25%,
+    #e3e3e3 50%,
+    #b5b5b5 75%,
+    #787878 100%
+  );
+  background-color: antiquewhite;
+  color: black;
+  text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
   font-size: 18px;
   width: 120px;
   padding: 8px;
@@ -10,9 +25,9 @@
   top: 10px;
   left: 90%;
   cursor: pointer;
+  font-family: "Orbitron-Regular";
+  text-transform: uppercase;
 }
 .back-button:hover {
-  color: green;
-  background-color: yellow;
-  font-weight: bold;
+  transform: scale(1.1);
 }
