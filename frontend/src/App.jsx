@@ -1,12 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable import/no-unresolved */
 import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-unresolved */
 
 import "./App.css";
 import Dishes from "./components/dishList/Dishes";
 import RandomDish from "./components/randomDish/RandomDish";
 import Map from "./components/map/Map";
-import Home from "./pages/Home";
 import LanguageProvider from "./contexts/LanguageContext";
 
 function App() {

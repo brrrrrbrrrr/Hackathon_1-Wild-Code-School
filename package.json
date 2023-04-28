@@ -31,6 +31,10 @@
     "husky": "^8.0.3"
   },
   "dependencies": {
-    "prop-types": "^15.8.1"
+    "prop-types": "^15.8.1",
+    "react-particles": "^2.9.3",
+    "three": "^0.152.0",
+    "tsparticles": "^2.9.3",
+    "typewriter-effect": "^2.19.0"
   }
 }
