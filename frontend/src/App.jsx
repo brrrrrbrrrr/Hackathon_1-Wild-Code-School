@@ -3,6 +3,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
+
 import Dishes from "./components/dishList/Dishes";
 import RandomDish from "./components/randomDish/RandomDish";
 import Map from "./components/map/Map";
@@ -17,7 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/map" element={<Map />} />
           <Route path="/randomDish" element={<RandomDish />} />
-          <Route path="/dishes" element={<Dishes />} />
+          <Route path="/country" element={<Dishes />} />
         </Routes>
       </LanguageProvider>
     </div>
