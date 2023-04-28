@@ -4,7 +4,7 @@ import "./RandomDish.css";
 import Test from "../../pages/Test";
 
 function RandomDish() {
-  const [randomDish, setRandomDish] = useState([]);
+  const [randomDish, setRandomDish] = useState(null);
   const [randomInsult, setRandomInsult] = useState("");
   const [button, setButton] = useState(false);
 
@@ -20,10 +20,12 @@ function RandomDish() {
 
   const getRandomInsult = () => {
     setButton(!button);
-    setRandomDish("");
+    setRandomDish(null);
   };
 
   useEffect(() => {
+    if (!button) return;
+
     const corsProxy = "https://api.allorigins.win/raw?url=";
     const apiUrl =
       "https://evilinsult.com/generate_insult.php?lang=en&type=text";
@@ -31,7 +33,6 @@ function RandomDish() {
       .get(corsProxy + apiUrl)
       .then((response) => setRandomInsult(response.data))
       .catch((err) => console.error(err));
-    console.warn(randomInsult);
   }, [button]);
 
   return (
@@ -52,25 +53,30 @@ function RandomDish() {
           <button
             type="button"
             className="button-random"
-            onClick={getRandomInsult}
+            onClick={() => {
+              getRandomInsult();
+              setRandomInsult("");
+            }}
           >
             No
           </button>
         </div>
       </div>
       <div className="random-insult">
-        {randomInsult ? <p className="random-insult-p">{randomInsult}</p> : ""}
+        {randomInsult && <p className="random-insult-p">{randomInsult}</p>}
       </div>
       <div className="random-item">
-        {randomDish ? (
+        {randomDish && (
           <div className="random-dish">
             <div className="random-item-half random-dish-title-image-container">
               <h2 className="random-dish__title">{randomDish.strMeal}</h2>
-              <img
-                src={randomDish.strMealThumb}
-                alt={randomDish.strMeal}
-                className="random-dish__image"
-              />
+              {randomDish.strMealThumb && (
+                <img
+                  src={randomDish.strMealThumb}
+                  alt={randomDish.strMeal}
+                  className="random-dish__image"
+                />
+              )}
             </div>
             <div className="random-item-half random-item-half2">
               <p className="random-dish__area">Origin: {randomDish.strArea}</p>
@@ -81,8 +87,6 @@ function RandomDish() {
               </p>
             </div>
           </div>
-        ) : (
-          ""
         )}
       </div>
       <Test />

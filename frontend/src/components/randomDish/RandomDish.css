@@ -90,6 +90,11 @@
   font-size: 17px;
   text-align: justify;
   line-height: 3vh;
+  display: block;
+}
+
+.recipe-title-disabled {
+  display: none;
 }
 
 .random-dish-title-image-container {
