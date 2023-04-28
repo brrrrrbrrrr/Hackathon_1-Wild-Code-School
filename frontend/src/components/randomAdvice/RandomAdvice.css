@@ -19,10 +19,9 @@
   cursor: pointer;
   border-radius: 10px;
   position: absolute;
-  top: 20px;
   font-family: "Orbitron-Regular";
   text-transform: uppercase;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .random-advice-button:hover {
@@ -42,7 +41,7 @@
 
 .random-advice-quote {
   font-size: 30px;
-  margin-top: 50px;
+  margin-top: 20%;
   /* color: white; */
   font-family: "Orbitron-Regular";
   text-transform: uppercase;
