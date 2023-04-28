@@ -4,13 +4,21 @@
   min-height: 300px;
   margin-bottom: 50px;
   margin-right: 50px;
+  border: 1px solid white;
   background-color: antiquewhite;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-top: 20px;
-  background: linear-gradient(90deg,#787878 0%,#b5b5b5 25%,#e3e3e3 50%,#b5b5b5 75%,#787878 100%);
+  background: linear-gradient(
+    90deg,
+    #787878 0%,
+    #b5b5b5 25%,
+    #e3e3e3 50%,
+    #b5b5b5 75%,
+    #787878 100%
+  );
 }
 
 .dish__title {
@@ -22,8 +30,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   color: black;
-text-shadow: 3px 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.5);
 }
 .dish__image {
   width: 238px;
