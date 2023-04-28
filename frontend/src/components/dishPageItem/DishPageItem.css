@@ -1,6 +1,9 @@
 .dish-page-container {
+
   padding: 50px 150px;
   font-size: 20px;
+  height: 100vh;
+  margin: auto 0px;
 }
 .dish-page-span {
   text-decoration: underline;
@@ -17,6 +20,7 @@
 }
 .dish-page-instructions {
   margin-bottom: 55px;
+  line-height: 1.9;
 }
 .dish-page-image {
   width: 350px;

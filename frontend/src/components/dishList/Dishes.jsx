@@ -6,6 +6,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import DishItem from "../dishes/DishItem";
 import { useLanguageData } from "../../contexts/LanguageContext";
+import Test from "../../pages/Test";
 import Image from "../image/Image";
 
 function Dishes() {
@@ -26,21 +27,25 @@ function Dishes() {
   }
 
   return (
-    <div className="country-container">
-      <Image languageData={languageData} className="image-component" />
-      <div className="dish-title-item">
-        <h1>Les supers plats locaux ! </h1>
+    <div className="dish-title-item">
+      <Test />
 
-        {countryDishes &&
-          countryDishes.map((dish) => (
-            <Link to={`/dish/${dish.idMeal}`}>
-              <DishItem
-                key={dish.idMeal}
-                title={dish.strMeal}
-                image={dish.strMealThumb}
-              />
-            </Link>
-          ))}
+      <div className="country-container">
+        <Image languageData={languageData} className="image-component" />
+        <div className="dish-title-item">
+          <h1>The best local dishes ! </h1>
+
+          {countryDishes &&
+            countryDishes.map((dish) => (
+              <Link to={`/dish/${dish.idMeal}`}>
+                <DishItem
+                  key={dish.idMeal}
+                  title={dish.strMeal}
+                  image={dish.strMealThumb}
+                />
+              </Link>
+            ))}
+        </div>
       </div>
     </div>
   );
