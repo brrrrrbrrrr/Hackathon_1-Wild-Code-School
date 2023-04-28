@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import ParticleBackground from "./pages/ParticleBackground";
+
 import "./App.css";
 import RandomDish from "./components/randomDish/RandomDish";
 import Map from "./components/map/Map";
@@ -9,8 +9,6 @@ import LanguageProvider from "./contexts/LanguageContext";
 function App() {
   return (
     <div className="App">
-      <ParticleBackground />
-
       <LanguageProvider>
         <Routes>
           <Route path="/" element={<Home />} />
