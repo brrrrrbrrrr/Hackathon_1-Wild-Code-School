@@ -1,5 +1,4 @@
 .dish-page-container {
-
   padding: 50px 150px;
   font-size: 20px;
   height: 100vh;
@@ -21,11 +20,13 @@
 .dish-page-instructions {
   margin-bottom: 55px;
   line-height: 1.9;
+  letter-spacing: 5px;
 }
 .dish-page-image {
   width: 350px;
   height: 350px;
   border-radius: 5%;
+  border: 1px solid white;
 }
 .dish-page-media-container {
   display: flex;
@@ -34,4 +35,5 @@
 }
 .dish-page-video {
   border-radius: 10px;
+  border: 1px solid white;
 }
