@@ -20,7 +20,7 @@ function Image({ languageData }) {
   return (
     <div className="img-container">
       <div className="img-title-item">
-        <h1>Mes super photos :</h1>
+        <h1>My best pictures :</h1>
       </div>
       <img src={image} className="img" alt="" />
       <img src={image2} className="img" alt="" />

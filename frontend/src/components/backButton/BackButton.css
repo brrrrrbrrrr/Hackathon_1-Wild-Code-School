@@ -6,11 +6,12 @@
   padding: 8px;
   border-radius: 10px;
   transition: all 400ms ease-in;
-  position: sticky;
+  position: absolute;
   top: 10px;
   left: 90%;
   cursor: pointer;
 }
+
 .back-button:hover {
   color: green;
   background-color: yellow;

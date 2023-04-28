@@ -4,11 +4,7 @@ import * as THREE from "three";
 function Test() {
   const canvasRef = useRef(null);
   const [speed, setSpeed] = useState(0.09);
-  const [activated, setActivated] = useState(false);
-
-  const handleClick = () => {
-    setActivated((prev) => !prev);
-  };
+  const [activated] = useState(false);
 
   useEffect(() => {
     let camera;
@@ -108,12 +104,6 @@ function Test() {
 
   return (
     <div>
-      <input
-        type="submit"
-        value="Let's go"
-        className="btn"
-        onClick={handleClick}
-      />
       <canvas ref={canvasRef} style={{ width: "100%", height: "100%" }} />
     </div>
   );
