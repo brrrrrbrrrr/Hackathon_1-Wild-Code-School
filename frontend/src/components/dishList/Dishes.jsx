@@ -2,10 +2,12 @@
 import React, { useEffect, useState } from "react";
 import "./Dishes.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import DishItem from "../dishes/DishItem";
 
 function Dishes({ language }) {
   const [countryDishes, setCountryDishes] = useState([]);
+  // const [id, setId] = useState("");
   useEffect(() => {
     axios
       .get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${language}`)
@@ -21,11 +23,13 @@ function Dishes({ language }) {
 
       {countryDishes &&
         countryDishes.map((dish) => (
-          <DishItem
-            key={dish.idMeal}
-            title={dish.strMeal}
-            image={dish.strMealThumb}
-          />
+          <Link to={`/dish/${dish.idMeal}`}>
+            <DishItem
+              key={dish.idMeal}
+              title={dish.strMeal}
+              image={dish.strMealThumb}
+            />
+          </Link>
         ))}
     </div>
   );
