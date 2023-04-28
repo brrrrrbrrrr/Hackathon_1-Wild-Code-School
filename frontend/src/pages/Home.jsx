@@ -2,14 +2,14 @@
 /* eslint-disable import/no-named-as-default */
 import Cockpit from "../components/Cockpit";
 import ParticleBackground from "./ParticleBackground";
-import Map from "../components/map/Map";
+// import Map from "../components/map/Map";
 
 function Home() {
   return (
     <div>
       <Cockpit />
       <ParticleBackground />
-      <Map />
+      {/* <Map /> */}
     </div>
   );
 }

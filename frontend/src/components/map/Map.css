@@ -24,7 +24,7 @@ path {
 } */
 
 .worldmap__figure-container {
-  position: absolute;
+  position: fixed;
   top: 30%;
   right: 36%;
   z-index: 30;
