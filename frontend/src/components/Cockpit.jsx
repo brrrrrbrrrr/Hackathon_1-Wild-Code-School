@@ -1,11 +1,10 @@
-/* eslint-disable import/order */
 /* eslint-disable import/no-extraneous-dependencies */
+import Typewriter from "typewriter-effect";
 import React, { useRef, useState } from "react";
 import CockpitPicture from "../assets/img/cockpit.png";
 import PhoneVideo from "../assets/img/holo_phone.webm";
 import PhoneVideoLoop from "../assets/img/holo_phone_loop.webm";
 import "./Cockpit.css";
-import Typewriter from "typewriter-effect";
 
 function Cockpit() {
   const phoneRef = useRef();
