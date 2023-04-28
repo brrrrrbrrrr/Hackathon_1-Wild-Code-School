@@ -33,18 +33,19 @@ function Dishes() {
       <div className="country-container">
         <Image languageData={languageData} className="image-component" />
         <div className="dish-title-item">
-          <h1>Les supers plats locaux ! </h1>
+          <h1>The best local dishes ! </h1>
+
+          {countryDishes &&
+            countryDishes.map((dish) => (
+              <Link to={`/dish/${dish.idMeal}`}>
+                <DishItem
+                  key={dish.idMeal}
+                  title={dish.strMeal}
+                  image={dish.strMealThumb}
+                />
+              </Link>
+            ))}
         </div>
-        {countryDishes &&
-          countryDishes.map((dish) => (
-            <Link to={`/dish/${dish.idMeal}`}>
-              <DishItem
-                key={dish.idMeal}
-                title={dish.strMeal}
-                image={dish.strMealThumb}
-              />
-            </Link>
-          ))}
       </div>
     </div>
   );

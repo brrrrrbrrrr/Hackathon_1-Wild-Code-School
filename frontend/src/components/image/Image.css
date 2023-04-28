@@ -1,6 +1,7 @@
 .img {
-  background-color: red;
-  width: 40rem;
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
   margin-left: 2rem;
+  width: 29rem;
+height: 29rem;
+object-fit: cover;
 }
