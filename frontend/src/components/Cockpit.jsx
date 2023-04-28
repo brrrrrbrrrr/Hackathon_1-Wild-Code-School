@@ -12,6 +12,7 @@ function Cockpit() {
 
   const phoneLoopRef = useRef();
   const [isVisible, setIsVisible] = useState(false);
+  const [isShown, setIsShown] = useState(false);
   const [typewriterVisible, setTypewriterVisible] = useState(false);
 
   const handleClick = () => {
@@ -24,6 +25,10 @@ function Cockpit() {
     }, 5000);
   };
 
+  const handleButton = () => {
+    setIsShown(!isShown);
+  };
+
   return (
     <div className="cockpit-container">
       <video src={PhoneVideo} muted className="phone-video" ref={phoneRef} />
@@ -32,10 +37,17 @@ function Cockpit() {
         muted
         loop
         autoPlay
-        className={isVisible ? "phone-video-loop" : "disable"}
+        className={isVisible ? "phone-video-loop" : "disable-video-loop"}
         ref={phoneLoopRef}
       />
-      <button type="button" onClick={handleClick}>
+      <button
+        type="button"
+        onClick={() => {
+          handleButton();
+          handleClick();
+        }}
+        className={isShown ? "disabled-start-mission" : "start-mission"}
+      >
         Start mission
       </button>
       <img

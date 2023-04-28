@@ -12,26 +12,27 @@
 
 
 .cockpit-picture {
-  z-index: 0;
+  z-index: 3;
   margin: auto;
   width: 100%;
+  position: absolute;
 }
 
 .phone-video {
   position: absolute;
-  z-index: 1;
+  z-index: 4;
   width: 100%;
   top: 0;
 }
 
 .phone-video-loop {
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   width: 100%;
   top: 0;
 }
 
-.disable {
+.disable-video-loop {
   position: absolute;
   opacity: 0;
   width: 100%;
@@ -43,21 +44,48 @@
 button {
   cursor: pointer;
   position: absolute;
-  color: #000;
-  background-color: #dd2020;
-  margin: 20px;
+  background-color: rgba(125, 182, 232, 0.5);
+  box-shadow: 0 0 20px rgb(125, 182, 232);
   padding: 20px;
-  z-index: 10;
+  z-index: 20;
+  top: 60%;
+  left: 47%;
+  mix-blend-mode: hard-light;
+  border-radius: 5px;
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+  transition: all 250ms ease;
+  font-size: 1vw;
+}
+
+button:hover {
+  background-color: rgba(125, 182, 232, 0.8);
 }
 
 .timer {
   z-index: 20;
   width: 14%;
   position: absolute;
-  line-height: 2rem;
-  top: 10%;
+  line-height: 4vh;
+  top: 18%;
   left: 44%;
   color: #fff;
   text-shadow: 0 0 5px#fff;
   font-family: "Orbitron-Regular", serif;
+  font-size: 1vw;
+}
+
+.disabled-start-mission {
+  animation: fade 750ms ease;
+  opacity: 0;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
