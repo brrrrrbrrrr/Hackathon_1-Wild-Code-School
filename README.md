@@ -1,3 +1,8 @@
+## Theme 
+Our theme was travel, we chose to put ourselves in the shoes of an influencer from space.
+
+---------------------------------- TEMPLATE -----------------------------------------
+
 ## Concept
 
 This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
